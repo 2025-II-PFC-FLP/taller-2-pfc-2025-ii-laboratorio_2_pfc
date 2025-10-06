@@ -33,7 +33,7 @@ package taller
     test("grande: x = 10 con d=5, e=3 debe ser menor que 0.4") {
       assert(c.pertenece(10, g2) < 0.4)
     }
-    // pruebas para complemento ---
+    // pruebas para complemento
     val comp = c.complemento(g1)
     test("complemento: x = 0 debe ser 1.0") {
       assert(math.abs(c.pertenece(0, comp) - 1.0) < 0.001)
@@ -63,7 +63,6 @@ package taller
       val esperado = math.max(c.pertenece(3, g1), c.pertenece(3, g2))
       assert(math.abs(c.pertenece(3, un) - esperado) < 0.001)
     }
-
     test("union: x = 10 debe coincidir con el mayor valor entre g1 y g2") {
       val esperado = math.max(c.pertenece(10, g1), c.pertenece(10, g2))
       assert(math.abs(c.pertenece(10, un) - esperado) < 0.001)
