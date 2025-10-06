@@ -3,7 +3,9 @@ package taller
 class ConjuntosDifusos {
 
   type ConjDifuso = Int => Double
-
+  def pertenece(elem: Int, s: ConjDifuso): Double = {
+    s(elem)
+  }
   // Define un conjunto difuso de números grandes
   // usando la fórmula (n / (n + d))^e
   def grande(d: Int, e: Int): ConjDifuso = {
