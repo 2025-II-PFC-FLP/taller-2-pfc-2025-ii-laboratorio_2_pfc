@@ -9,22 +9,4 @@ object App {
   }
 
   def greeting(): String = "Hello, world!"
-
-  def interseccion(cd1: ConjDifuso, cd2: ConjDifuso): ConjDifuso = {
-    (x: Int) => math.min(cd1(x), cd2(x))
-  }
-
-  def inclusion(cd1: ConjDifuso, cd2: ConjDifuso): Boolean = {
-    @tailrec
-    def aux(v: Int): Boolean = {
-      if (v > 1000) true
-      else if (cd1(v) > cd2(v)) false
-      else aux(v + 1)
-    }
-    aux(0)
-  }
-
-  def igualdad(cd1: ConjDifuso, cd2: ConjDifuso): Boolean = {
-    inclusion(cd1, cd2) && inclusion(cd2, cd1)
-  }
 }
